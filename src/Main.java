@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
         MyArrayList<Integer> list = new MyArrayList<>();
@@ -22,5 +20,16 @@ public class Main {
         for (int i = 0; i < int_arr.length; i++) {
             System.out.println(int_arr[i]);
         }
+        MyMinHeap<Integer> heapExample = new MyMinHeap<>();
+        heapExample.insert(3);
+        heapExample.insert(4);
+        heapExample.insert(5);
+        heapExample.insert(6);
+        heapExample.insert(123);
+        heapExample.insert(1);
+        while (!heapExample.empty()) {
+            System.out.print(heapExample.extractMin() + " ");
+        }
+
     }
 }
