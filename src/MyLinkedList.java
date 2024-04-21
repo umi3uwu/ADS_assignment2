@@ -64,7 +64,15 @@ public class MyLinkedList<T extends Comparable<T>> implements MyList<T> {
 
     @Override
     public void addFirst(T item) {
-        add(0,item);
+        MyNode<T> newNode = new MyNode<>(item);
+        if (head == null) {
+            head = tail = newNode;
+        } else {
+            newNode.next = head;
+            head.prev = newNode;
+            head = newNode;
+        }
+        length++;
     }
 
     @Override
