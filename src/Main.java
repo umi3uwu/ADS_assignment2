@@ -20,6 +20,7 @@ public class Main {
         for (int i = 0; i < int_arr.length; i++) {
             System.out.println(int_arr[i]);
         }
+
         MyMinHeap<Integer> heapExample = new MyMinHeap<>();
         heapExample.insert(3);
         heapExample.insert(4);
@@ -30,6 +31,18 @@ public class Main {
         while (!heapExample.empty()) {
             System.out.print(heapExample.extractMin() + " ");
         }
+        System.out.println();
 
+        MyQueue<Integer> queue = new MyQueue<>();
+
+        queue.enqueue(10);
+        queue.enqueue(20);
+        queue.enqueue(30);
+
+        System.out.println(queue.peek());
+        while (!queue.empty()) {
+            System.out.print(queue.dequeue() + " ");
+        }
+        System.out.println();
     }
 }
